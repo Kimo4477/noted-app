@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noted — Modern Note Taking</title>
+  <link rel="stylesheet" href="src/styles/main.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1 class="logo">📝 Noted</h1>
+        <button id="new-note-btn" class="btn-primary">+ New Note</button>
+      </div>
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search notes..." />
+      </div>
+      <ul id="notes-list" class="notes-list"></ul>
+    </aside>
+    <main class="editor-area">
+      <div id="empty-state" class="empty-state">
+        <span>✏️</span>
+        <p>Select a note or create a new one</p>
+      </div>
+      <div id="editor" class="editor hidden">
+        <div class="editor-toolbar">
+          <input type="text" id="note-title" class="note-title-input" placeholder="Note title..." />
+          <div class="toolbar-actions">
+            <span id="last-saved" class="last-saved"></span>
+            <button id="delete-note-btn" class="btn-danger">🗑 Delete</button>
+          </div>
+        </div>
+        <textarea id="note-content" placeholder="Start writing..."></textarea>
+      </div>
+    </main>
+  </div>
+  <script src="src/components/app.js"></script>
+</body>
+</html>
